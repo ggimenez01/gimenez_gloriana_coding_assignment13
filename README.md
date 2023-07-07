@@ -7,7 +7,7 @@ Create the UI Component library from assignment 12 will add a Huskey implementat
 3. Go to the project directory where the folder was download. Example: Type in cd C:/Downloads/gimenez_gloriana_coding_assignment13
 4. Type in npm install
 5. Type in npm run storybook
-6. Please note we need to run the following to install the husky to new machine with the repository and also the git hooks.
+6. Please note we need to run the following to install the husky to new machine with the repository and also the git hooks as it was pre-initialized in the local machine. 
 7. Type npm install husky --save-dev
 8. type npx husky install
 9. type npm run prettier -- --write "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}"
