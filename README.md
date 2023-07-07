@@ -10,7 +10,7 @@ Create the UI Component library from assignment 12 will add a Huskey implementat
 6. Please note we need to run the following to install the husky to new machine with the repository and also the git hooks.
 7. Type npm install husky --save-dev
 8. type npx husky install
-9. npm run prettier -- --write "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}"
+9. type npm run prettier -- --write "src/**/*.{js,jsx,ts,tsx,json,css,scss,md}"
 10. now try to modify any of the components with error
 11. git add .
 12. git commit -m "test"
