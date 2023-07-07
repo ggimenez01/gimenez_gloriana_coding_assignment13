@@ -1,0 +1,60 @@
+🔎 checking possible migrations..
+
+🔎 found a 'github-flavored-markdown-mdx' migration:
+╭ Automigration detected ──────────────────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                      │
+│   In MDX1 you had the option of using GitHub flavored markdown.                                                      │
+│                                                                                                                      │
+│   Storybook 7.0 uses MDX2 for compiling MDX, and thus no longer supports GFM out of the box.                         │
+│   Because of this you need to explicitly add the GFM plugin in the addon-docs options:                               │
+│   https://storybook.js.org/docs/react/writing-docs/mdx#lack-of-github-flavored-markdown-gfm                          │
+│                                                                                                                      │
+│   We recommend you follow the guide on the link above, however we can add a temporary storybook addon that helps     │
+│   make this migration easier.                                                                                        │
+│   We'll install the addon and add it to your storybook config.                                                       │
+│                                                                                                                      │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+? Do you want to run the 'github-flavored-markdown-mdx' migration on your project? » (Y/n)√ Do you want to run the 'github-flavored-markdown-mdx' migration on your project? ... yes
+✅ Adding "@storybook/addon-mdx-gfm" addon
+✅ ran github-flavored-markdown-mdx migration
+
+⚠️  failed to check fix missing-babelrc
+
+Error: Error while parsing config - JSON5: invalid character ':' at 1:10
+    at C:\dockers\Assignment12_GlorianaGimenez\component_library\node_modules\@babel\core\lib\config\files\configuration.js:118:11
+    at C:\dockers\Assignment12_GlorianaGimenez\component_library\node_modules\@babel\core\lib\config\files\utils.js:22:12
+    at Generator.next (<anonymous>)
+    at Function.<anonymous> (C:\dockers\Assignment12_GlorianaGimenez\component_library\node_modules\@babel\core\lib\gensync-utils\async.js:21:3)
+    at Generator.next (<anonymous>)
+    at step (C:\dockers\Assignment12_GlorianaGimenez\component_library\node_modules\gensync\index.js:261:32)
+    at C:\dockers\Assignment12_GlorianaGimenez\component_library\node_modules\gensync\index.js:273:13
+    at async.call.result.err.err (C:\dockers\Assignment12_GlorianaGimenez\component_library\node_modules\gensync\index.js:223:11)
+    at C:\dockers\Assignment12_GlorianaGimenez\component_library\node_modules\gensync\index.js:189:28
+    at FSReqCallback.readFileAfterClose [as oncomplete] (node:internal/fs/read_file_context:68:3)
+
+╭ Migration check ran with failures ───────────────────────────────────────────────────────────────────────────────────╮
+│                                                                                                                      │
+│   Successful migrations:                                                                                             │
+│                                                                                                                      │
+│   github-flavored-markdown-mdx                                                                                       │
+│                                                                                                                      │
+│   Failed migrations:                                                                                                 │
+│                                                                                                                      │
+│   missing-babelrc:                                                                                                   │
+│   Error while parsing config - JSON5: invalid character ':' at 1:10                                                  │
+│                                                                                                                      │
+│   You can find the full logs in C:\dockers\Assignment12_GlorianaGimenez\component_library\migration-storybook.log    │
+│                                                                                                                      │
+│   ─────────────────────────────────────────────────                                                                  │
+│                                                                                                                      │
+│   If you'd like to run the migrations again, you can do so by running 'npx storybook@next automigrate'               │
+│                                                                                                                      │
+│   The automigrations try to migrate common patterns in your project, but might not contain everything needed to      │
+│   migrate to the latest version of Storybook.                                                                        │
+│                                                                                                                      │
+│   Please check the changelog and migration guide for manual migrations and more information:                         │
+│   https://storybook.js.org/migration-guides/7.0                                                                      │
+│   And reach out on Discord if you need help: https://discord.gg/storybook                                            │
+│                                                                                                                      │
+╰──────────────────────────────────────────────────────────────────────────────────────────────────────────────────────╯
+

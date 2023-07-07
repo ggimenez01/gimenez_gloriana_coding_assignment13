@@ -1,0 +1,93 @@
+{
+  "name": "gimenez_gloriana_ui_garden_build_checks",
+  "version": "1.0.0",
+  "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
+  "main": "index.js",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --watchAll=false",
+    "storybook": "storybook dev -p 8018",
+    "eject": "react-scripts eject",
+    "build-storybook": "storybook build",
+    "eslint": "eslint .",
+    "prettier": "prettier --check \"src/**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
+    "precommit": "npm run prettier && npm run eslint && npm run test",
+    "lint": "eslint .",
+    "format": "prettier --write \"src/**/*.+(js|jsx|ts|tsx)\"",
+    "test:button": "react-scripts test src/components/Button",
+    "test:dropdown": "react-scripts test src/components/Dropdown",
+    "test:card": "react-scripts test src/components/Card",
+    "test:all": "npm run test:button && npm run test:dropdown && npm run test:card"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
+    "@babel/preset-env": "^7.22.5",
+    "@babel/preset-react": "^7.22.5",
+    "@babel/preset-typescript": "^7.22.5",
+    "@storybook/addon-actions": "^7.0.20",
+    "@storybook/addon-essentials": "^7.0.20",
+    "@storybook/addon-interactions": "^7.0.20",
+    "@storybook/addon-knobs": "^7.0.2",
+    "@storybook/addon-links": "^7.0.20",
+    "@storybook/addon-mdx-gfm": "^7.0.20",
+    "@storybook/addon-viewport": "^7.0.20",
+    "@storybook/blocks": "^7.0.20",
+    "@storybook/react": "^7.0.24",
+    "@storybook/react-webpack5": "^7.0.20",
+    "@storybook/testing-library": "^0.1.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^14.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.60.1",
+    "@typescript-eslint/parser": "^5.60.1",
+    "eslint": "^8.43.0",
+    "eslint-config-xo": "^0.43.1",
+    "eslint-config-xo-typescript": "^0.57.0",
+    "eslint-plugin-react": "^7.32.2",
+    "husky": "^8.0.3",
+    "jest": "^27.5.1",
+    "lint-staged": "^13.2.3",
+    "prettier": "^2.8.8",
+    "prettier-config": "^1.0.0",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "storybook": "^7.0.20",
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "deep-equal": "^2.2.1",
+    "install": "^0.13.0",
+    "polished": "^4.2.2",
+    "react-scripts": "^5.0.1",
+    "styled-components": "^5.3.11"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run precommit"
+    }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx,json,css,scss,md}": [
+      "prettier --write",
+      "eslint --fix",
+      "npm test",
+      "git add"
+    ]
+  }
+}
